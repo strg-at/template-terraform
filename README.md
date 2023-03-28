@@ -25,9 +25,6 @@ Infrastructure as Code (IaC) with Terraform.
 
 - README.md: update h1
 - README.md: update link to remote state file below
-- .github/workflows/terraform.yaml: update `env` and `runs-on`
-
-See Confluence reference for Github Actions.
 
 <details>
   <summary style="font-size:1.2em;">Table of Contents</summary>
