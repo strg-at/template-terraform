@@ -21,11 +21,6 @@
 
 Infrastructure as Code (IaC) with Terraform.
 
-## Template introductions - remove me when initialized
-
-- README.md: update h1
-- README.md: update link to remote state file below
-
 <details>
   <summary style="font-size:1.2em;">Table of Contents</summary>
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -40,6 +35,7 @@ Infrastructure as Code (IaC) with Terraform.
   - [Preparation](#preparation)
   - [Howto add resources](#howto-add-resources)
 - [Known Issues](#known-issues)
+- [Terraform docs](#terraform-docs)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 </details>
@@ -125,3 +121,11 @@ git switch -c feature/INPRO-1-configure-resource
 [terraform-url]: https://www.terraform.io/
 [statefile-shield]: https://img.shields.io/badge/GCS-tfstate-F8991D.svg?logo=googlecloud
 [statefile-url]: https://console.cloud.google.com/storage/browser/customer-tf-states/customer-terraform-infra
+
+## Terraform docs
+
+<!-- prettier-ignore-start -->
+<!-- BEGIN_TF_DOCS -->
+
+<!-- END_TF_DOCS -->
+<!-- prettier-ignore-end -->
