@@ -17,7 +17,7 @@ repos:
           - --notitle
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.99.0
+    rev: v1.99.5
     hooks:
       - id: terraform_docs
         args:
@@ -80,7 +80,7 @@ repos:
           - .markdownlint.yaml
 
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.5.3
+    rev: v3.6.2
     hooks:
       - id: prettier
         args:
@@ -95,6 +95,6 @@ repos:
       - id: forbid-secrets
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.26.0
+    rev: v8.27.2
     hooks:
       - id: gitleaks
