@@ -1,12 +1,18 @@
 ---
+# yaml-language-server: $schema=https://json.schemastore.org/pre-commit-config.json
 fail_fast: false
 default_stages:
   - pre-commit
   - pre-push
 
 repos:
+  # checks pre-commit config for errors
+  - repo: meta
+    hooks:
+      - id: check-useless-excludes
+
   - repo: https://github.com/thlorenz/doctoc
-    rev: v2.2.0
+    rev: v2.3.0
     hooks:
       - id: doctoc
         args:
@@ -17,7 +23,7 @@ repos:
           - --notitle
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.99.5
+    rev: v1.105.0
     hooks:
       - id: terraform_docs
         args:
@@ -30,28 +36,36 @@ repos:
       # - id: terraform_trivy
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict
       - id: check-executables-have-shebangs
-      - id: check-json
+      - id: check-illegal-windows-names
       - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
       - id: check-symlinks
+      - id: check-vcs-permalinks
+      - id: destroyed-symlinks
+      - id: detect-aws-credentials
+        args:
+          - --allow-missing-credentials
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: no-commit-to-branch
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+      # format-specific
+      - id: check-json
       - id: check-toml
       - id: check-xml
       - id: check-yaml
         args:
           - --allow-multiple-documents
-      - id: detect-private-key
-      - id: end-of-file-fixer
-      - id: fix-byte-order-marker
-      - id: mixed-line-ending
-      - id: no-commit-to-branch
-      - id: trailing-whitespace
 
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.37.1
+    rev: v1.38.0
     hooks:
       - id: yamllint
         args:
@@ -59,20 +73,20 @@ repos:
           - .yamllint.yaml
 
   - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.5.5
+    rev: v1.5.6
     hooks:
       - id: remove-crlf
       - id: remove-tabs
 
   - repo: https://github.com/sirosen/texthooks
-    rev: 0.6.8
+    rev: 0.7.1
     hooks:
       - id: fix-smartquotes
       - id: fix-ligatures
       - id: forbid-bidi-controls
 
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.45.0
+    rev: v0.48.0
     hooks:
       - id: markdownlint-fix
         args:
@@ -80,7 +94,7 @@ repos:
           - .markdownlint.yaml
 
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.6.2
+    rev: v3.8.1
     hooks:
       - id: prettier
         args:
@@ -95,6 +109,6 @@ repos:
       - id: forbid-secrets
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.27.2
+    rev: v8.30.0
     hooks:
       - id: gitleaks
