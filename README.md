@@ -1,7 +1,5 @@
-<!-- markdownlint-disable MD041 -->
 <!-- markdownlint-disable MD033 -->
-<!-- markdownlint-disable MD028 -->
-<!-- markdownlint-disable MD024 -->
+<!-- markdownlint-disable MD041 -->
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -93,9 +91,7 @@ git switch -c feature/INPRO-1-configure-resource
 
 ### Howto add resources
 
-#### Terraform
-
-<!-- TBD -->
+When a PR is merged, a `terraform apply` has to be executed manually. If a state migration is needed, this needs to be mentioned in the PR as a comment.
 
 ## Known Issues
 
@@ -124,8 +120,10 @@ git switch -c feature/INPRO-1-configure-resource
 
 ## Terraform docs
 
+<!-- markdownlint-disable -->
 <!-- prettier-ignore-start -->
 <!-- BEGIN_TF_DOCS -->
 
 <!-- END_TF_DOCS -->
 <!-- prettier-ignore-end -->
+<!-- markdownlint-enable -->
