@@ -9,6 +9,7 @@
 !.editorconfig
 !.gitignore
 !.markdownlint.yaml
+!.mise.toml
 !.pre-commit-config.yaml
 !.prettierignore
 !.prettierrc.yaml
